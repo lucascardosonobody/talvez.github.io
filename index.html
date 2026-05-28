@@ -2921,17 +2921,27 @@ textarea {
 }
 
 .footer-main {
-  background-color: #1d1c1c;
-  padding-top: 60px;
+  --footer-bg: #1d1c1c;
+  --footer-text: #e0e0e0;
+  --footer-muted: #8c8c8c;
+  --footer-line: #2a2929;
+  --footer-red: #c62828;
+  --footer-gold: #c59b27;
+
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding-top: 68px;
   width: 100%;
 }
 
 .footer-container {
   max-width: 1280px;
   margin: 0 auto;
+  padding: 0 45px;
   display: grid;
   grid-template-columns: 1fr 1fr 1.05fr 1fr;
-  gap: 35px;
+  gap: 38px;
+  align-items: start;
 }
 
 .footer-col h3 {
@@ -2939,14 +2949,68 @@ textarea {
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 14px;
+  letter-spacing: 0.01em;
 }
 
 .contact-block {
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
 
 .contact-block.no-margin {
   margin-bottom: 0;
+}
+
+.footer-contact-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  max-width: 100%;
+  margin: 3px 0 0;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.45;
+  text-decoration: none;
+  transition: color 0.22s ease, transform 0.22s ease;
+}
+
+.footer-contact-line.footer-email {
+  color: var(--footer-text);
+}
+
+.footer-contact-line.footer-location {
+  align-items: flex-start;
+}
+
+.footer-contact-line:hover {
+  color: var(--footer-red);
+  transform: translateX(2px);
+}
+
+.footer-icon {
+  width: 15px;
+  height: 15px;
+  min-width: 15px;
+  color: currentColor;
+  transform: translateY(1px);
+}
+
+.footer-location .footer-icon {
+  margin-top: 2px;
+}
+
+.footer-contact-text {
+  display: inline-block;
+  overflow-wrap: anywhere;
+}
+
+.footer-address-stack {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.footer-address-stack span {
+  display: block;
 }
 
 .contact-block .highlight,
@@ -2959,25 +3023,45 @@ textarea {
 
 .contact-block a {
   font-size: 14px;
-  color: #e0e0e0;
+  color: var(--footer-text);
   text-decoration: none;
-  display: inline-block;
-  margin-top: 2px;
 }
 
 .footer-links {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .footer-links li {
-  margin-bottom: 14px;
+  margin-bottom: 13px;
 }
 
 .footer-links a {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
   font-size: 14px;
-  color: #e0e0e0;
+  color: var(--footer-text);
   text-decoration: none;
-  line-height: 1.2;
+  line-height: 1.25;
+  transition: color 0.22s ease, transform 0.22s ease;
+}
+
+.footer-links a::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  min-width: 5px;
+  margin-top: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.48;
+}
+
+.footer-links a:hover {
+  color: var(--footer-red);
+  transform: translateX(2px);
 }
 
 .obs {
@@ -2985,7 +3069,8 @@ textarea {
   font-size: 11.5px;
   color: #6a6a6a;
   font-style: italic;
-  margin-top: 5px;
+  margin-top: 6px;
+  line-height: 1.45;
 }
 
 .status-estagio {
@@ -3003,12 +3088,25 @@ textarea {
   margin-top: 10px;
 }
 
+.emec-wrapper a {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.emec-wrapper a:hover .emec-txt {
+  color: var(--footer-red);
+}
+
 .emec-qrcode {
   width: 95px;
   height: 95px;
   background-color: #ffffff;
   padding: 4px;
   display: block;
+  object-fit: cover;
 }
 
 .emec-txt {
@@ -3016,12 +3114,13 @@ textarea {
   font-weight: 700;
   color: #ffffff;
   line-height: 1.3;
+  transition: color 0.22s ease;
 }
 
 .footer-bottom {
-  margin-top: 80px;
-  padding: 40px 0 55px 0;
-  border-top: 1px solid #222222;
+  margin-top: 78px;
+  padding: 38px 0 52px;
+  border-top: 1px solid var(--footer-line);
 }
 
 .bottom-layout {
@@ -3031,6 +3130,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 34px;
 }
 
 .brand-logo img {
@@ -3041,29 +3141,117 @@ textarea {
 
 .copyright-text {
   text-align: center;
+  max-width: 650px;
 }
 
 .copyright-text p {
   font-size: 11px;
-  color: #8c8c8c;
+  color: var(--footer-muted);
   line-height: 1.6;
   margin-bottom: 2px;
 }
 
+.social-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.social-area h3 {
+  color: #ffffff;
+  font-size: 14.5px;
+  font-weight: 700;
+  margin: 0;
+}
+
 .social-icons {
   display: flex;
-  gap: 24px;
+  align-items: center;
+  gap: 10px;
 }
 
-.social-icons a {
+.social-link {
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 50%;
   color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  transition: opacity 0.2s;
+  transition: color 0.22s ease, border-color 0.22s ease, background 0.22s ease, transform 0.22s ease;
 }
 
-.social-icons a:hover {
-  opacity: 0.7;
+.social-link svg {
+  width: 16px;
+  height: 16px;
+  display: block;
 }
+
+.social-link:hover {
+  color: var(--footer-red);
+  border-color: var(--footer-red);
+  background: rgba(198,40,40,0.08);
+  transform: translateY(-2px);
+}
+
+.footer-main a:focus-visible {
+  outline: 2px solid var(--footer-gold);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+@media (max-width: 1200px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .bottom-layout {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-area {
+    align-items: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer-main {
+    padding-top: 48px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr !important;
+    padding: 0 24px;
+    gap: 30px;
+  }
+
+  .footer-col h3,
+  .contact-block {
+    text-align: left;
+  }
+
+  .bottom-layout {
+    padding: 0 24px;
+    gap: 22px;
+  }
+
+  .footer-bottom {
+    margin-top: 48px;
+    padding: 30px 0 42px;
+  }
+
+  .brand-logo img {
+    height: 54px;
+  }
+}
+
 
 #apresentacao {
   position: relative;
@@ -5639,12 +5827,249 @@ video {
   }
 }
 
+
+
+/* =========================================================
+   BOTÃO DE IDIOMA PT/EN
+   ========================================================= */
+.language-switcher {
+  position: fixed;
+  top: 30px;
+  right: 98px;
+  z-index: 1002;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(2, 26, 20, .14);
+  box-shadow: 0 12px 30px rgba(2, 26, 20, .14);
+  backdrop-filter: blur(14px);
+}
+
+.lang-btn {
+  border: 0;
+  min-width: 44px;
+  height: 36px;
+  border-radius: 999px;
+  background: transparent;
+  color: #021a14;
+  font-size: .82rem;
+  font-weight: 900;
+  letter-spacing: .06em;
+  cursor: pointer;
+  transition: background .22s ease, color .22s ease, transform .22s ease, box-shadow .22s ease;
+}
+
+.lang-btn:hover {
+  transform: translateY(-1px);
+  color: #c62828;
+}
+
+.lang-btn.active,
+.lang-btn[aria-pressed="true"] {
+  background: #021a14;
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(2, 26, 20, .20);
+}
+
+.lang-btn.active:hover,
+.lang-btn[aria-pressed="true"]:hover {
+  background: #c62828;
+  color: #ffffff;
+}
+
+#google_translate_element,
+.goog-te-banner-frame,
+.goog-te-gadget,
+.goog-te-balloon-frame,
+.goog-tooltip,
+.goog-tooltip:hover {
+  display: none !important;
+}
+
+body > .skiptranslate,
+iframe.skiptranslate {
+  display: none !important;
+}
+
+html.translated-ltr body,
+html.translated-rtl body,
+body {
+  top: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .language-switcher {
+    top: 22px;
+    right: 86px;
+    padding: 4px;
+  }
+
+  .lang-btn {
+    min-width: 38px;
+    height: 32px;
+    font-size: .76rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .language-switcher {
+    right: 78px;
+  }
+}
+
+
+
+/* =========================================================
+   AJUSTES SOLICITADOS — DIRETRIZES MOBILE + QUEBRA SEM HÍFEN
+   ========================================================= */
+
+/* Evita hifenização automática no site inteiro.
+   A palavra passa inteira para a linha de baixo quando houver espaço disponível. */
+body,
+body * {
+  -webkit-hyphens: none !important;
+  -ms-hyphens: none !important;
+  hyphens: none !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+}
+
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+strong,
+small {
+  text-wrap: pretty;
+}
+
+.section-title h1,
+.section-title h2,
+.cabecalho-mestre-eventos h1,
+.topo-pesquisa-master h1,
+.bloco-cabecalho-conselho h1 {
+  text-wrap: balance;
+}
+
+.footer-contact-text {
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+
+/* Diretrizes em tablets: menu um pouco mais largo e textos mais compactos. */
+@media (max-width: 960px) and (min-width: 769px) {
+  .diretrizes-abas-section .abas-container {
+    grid-template-columns: minmax(220px, 250px) 1fr !important;
+    gap: 18px !important;
+  }
+
+  .diretrizes-abas-section .aba-btn {
+    padding: 9px 11px !important;
+    gap: 8px !important;
+    border-radius: 11px !important;
+  }
+
+  .diretrizes-abas-section .aba-num {
+    font-size: 0.78rem !important;
+  }
+
+  .diretrizes-abas-section .aba-txt-wrapper strong {
+    font-size: 0.78rem !important;
+    line-height: 1.18 !important;
+  }
+
+  .diretrizes-abas-section .aba-txt-wrapper span {
+    font-size: 0.66rem !important;
+    line-height: 1.2 !important;
+  }
+}
+
+/* Diretrizes no celular: tópicos menores, cards mais largos na horizontal e rolagem suave. */
+@media (max-width: 768px) {
+  .diretrizes-abas-section .abas-container {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .diretrizes-abas-section .aba-botoes {
+    flex-direction: row !important;
+    gap: 7px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    padding: 2px 4px 10px !important;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .diretrizes-abas-section .aba-btn {
+    min-width: 230px !important;
+    max-width: 260px !important;
+    flex: 0 0 230px !important;
+    white-space: normal !important;
+    padding: 8px 10px !important;
+    gap: 7px !important;
+    border-radius: 11px !important;
+    scroll-snap-align: start;
+  }
+
+  .diretrizes-abas-section .aba-num {
+    font-size: 0.76rem !important;
+    line-height: 1 !important;
+  }
+
+  .diretrizes-abas-section .aba-txt-wrapper strong {
+    font-size: 0.76rem !important;
+    line-height: 1.16 !important;
+  }
+
+  .diretrizes-abas-section .aba-txt-wrapper span {
+    font-size: 0.64rem !important;
+    line-height: 1.18 !important;
+  }
+
+  .diretrizes-abas-section .aba-conteudo-painel {
+    padding: 22px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .diretrizes-abas-section .aba-btn {
+    min-width: 215px !important;
+    max-width: 235px !important;
+    flex-basis: 215px !important;
+  }
+
+  .diretrizes-abas-section .aba-txt-wrapper strong {
+    font-size: 0.72rem !important;
+  }
+
+  .diretrizes-abas-section .aba-txt-wrapper span {
+    font-size: 0.61rem !important;
+  }
+}
+
 </style>
 
 
 <body>
 
 <header class="header">
+
+  <div class="language-switcher notranslate" aria-label="Selecionar idioma / Select language">
+    <button class="lang-btn active" type="button" data-language-option="pt" aria-pressed="true">PT</button>
+    <button class="lang-btn" type="button" data-language-option="en" aria-pressed="false">EN</button>
+  </div>
+  <div id="google_translate_element" class="notranslate" aria-hidden="true"></div>
+
   <button class="acionador-menu-premium" id="btnAbreMenu" aria-label="Abrir Menu">
   <div class="hamburguer-elegante">
     <span class="traco longo"></span>
@@ -7485,29 +7910,50 @@ video {
 
 <footer class="footer-main">
     <div class="footer-container">
-      
+
       <div class="footer-col">
         <div class="contact-block">
           <h3>Matrículas e Novos Alunos</h3>
-          <p class="highlight">11 93449-8375</p>
-          <a href="mailto:seja@italo.br">seja@italo.br</a>
+          <a class="footer-contact-line" href="https://api.whatsapp.com/send/?phone=5511934498375" target="_blank" rel="noopener">
+            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.3-.3.75-.39 1.14-.26 1.25.42 2.6.65 3.95.65.62 0 1.1.48 1.1 1.1v3.49c0 .62-.48 1.1-1.1 1.1C10.61 21.76 2.24 13.39 2.24 3.5c0-.62.48-1.1 1.1-1.1h3.5c.62 0 1.1.48 1.1 1.1 0 1.35.22 2.7.64 3.95.12.39.04.84-.27 1.14l-2.19 2.2Z"/></svg>
+            <span class="footer-contact-text">11 93449-8375</span>
+          </a>
+          <a class="footer-contact-line footer-email" href="mailto:seja@italo.br">
+            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg>
+            <span class="footer-contact-text">seja@italo.br</span>
+          </a>
         </div>
-        
+
         <div class="contact-block">
           <h3>Atendimento à Pós-Graduação</h3>
-          <p class="highlight">11 93449-8375</p>
-          <a href="mailto:pos@italo.br">pos@italo.br</a>
+          <a class="footer-contact-line" href="https://api.whatsapp.com/send/?phone=5511934498375" target="_blank" rel="noopener">
+            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.3-.3.75-.39 1.14-.26 1.25.42 2.6.65 3.95.65.62 0 1.1.48 1.1 1.1v3.49c0 .62-.48 1.1-1.1 1.1C10.61 21.76 2.24 13.39 2.24 3.5c0-.62.48-1.1 1.1-1.1h3.5c.62 0 1.1.48 1.1 1.1 0 1.35.22 2.7.64 3.95.12.39.04.84-.27 1.14l-2.19 2.2Z"/></svg>
+            <span class="footer-contact-text">11 93449-8375</span>
+          </a>
+          <a class="footer-contact-line footer-email" href="mailto:pos@italo.br">
+            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg>
+            <span class="footer-contact-text">pos@italo.br</span>
+          </a>
         </div>
-        
+
         <div class="contact-block">
           <h3>SAC | Atendimentos de Alunos:</h3>
-          <p class="highlight">11 93449-8158</p>
-          <a href="mailto:timedeexperiencia@italo.br">timedeexperiencia@italo.br</a>
+          <a class="footer-contact-line" href="https://api.whatsapp.com/send/?phone=5511934498158" target="_blank" rel="noopener">
+            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.3-.3.75-.39 1.14-.26 1.25.42 2.6.65 3.95.65.62 0 1.1.48 1.1 1.1v3.49c0 .62-.48 1.1-1.1 1.1C10.61 21.76 2.24 13.39 2.24 3.5c0-.62.48-1.1 1.1-1.1h3.5c.62 0 1.1.48 1.1 1.1 0 1.35.22 2.7.64 3.95.12.39.04.84-.27 1.14l-2.19 2.2Z"/></svg>
+            <span class="footer-contact-text">11 93449-8158</span>
+          </a>
+          <a class="footer-contact-line footer-email" href="mailto:timedeexperiencia@italo.br">
+            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg>
+            <span class="footer-contact-text">timedeexperiencia@italo.br</span>
+          </a>
         </div>
-        
+
         <div class="contact-block no-margin">
           <h3>Ouvidoria:</h3>
-          <a href="mailto:ouvidoria@italo.br">ouvidoria@italo.br</a>
+          <a class="footer-contact-line footer-email" href="mailto:ouvidoria@italo.br">
+            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg>
+            <span class="footer-contact-text">ouvidoria@italo.br</span>
+          </a>
           <span class="obs">( Comunicar no assunto nº de Protocolo )</span>
         </div>
       </div>
@@ -7522,11 +7968,17 @@ video {
           <li><a href="https://207582.mannesoftprime.com.br/formandos/index.php">Consulta Formandos</a></li>
           <li><a href="https://207582.mannesoftprime.com.br/arquivo_digital/">Consulta Diploma Digital</a></li>
         </ul>
-        
+
         <div class="contact-block status-estagio">
           <h3>ESTÁGIO:</h3>
-          <p class="highlight"><a href="https://api.whatsapp.com/send/?phone=5511994121591">11 99412-1591</a></p>
-          <a href="mailto:estacao@italo.br">estacao@italo.br</a>
+          <a class="footer-contact-line" href="https://api.whatsapp.com/send/?phone=5511994121591" target="_blank" rel="noopener">
+            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.3-.3.75-.39 1.14-.26 1.25.42 2.6.65 3.95.65.62 0 1.1.48 1.1 1.1v3.49c0 .62-.48 1.1-1.1 1.1C10.61 21.76 2.24 13.39 2.24 3.5c0-.62.48-1.1 1.1-1.1h3.5c.62 0 1.1.48 1.1 1.1 0 1.35.22 2.7.64 3.95.12.39.04.84-.27 1.14l-2.19 2.2Z"/></svg>
+            <span class="footer-contact-text">11 99412-1591</span>
+          </a>
+          <a class="footer-contact-line footer-email" href="mailto:estacao@italo.br">
+            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg>
+            <span class="footer-contact-text">estacao@italo.br</span>
+          </a>
         </div>
       </div>
 
@@ -7548,16 +8000,23 @@ video {
         <div class="emec-section">
           <h3>CADASTRO E-MEC</h3>
           <div class="emec-wrapper">
-            <img src="https://via.placeholder.com/110" alt="QR Code E-MEC" class="emec-qrcode">
-            <p class="emec-txt">CONSULTE O<br>CADASTRO ÍTALO<br>NO E-MEC</p>
+            <a href="https://emec.mec.gov.br/" target="_blank" rel="noopener" aria-label="Consultar cadastro da Ítalo no E-MEC">
+              <img src="https://via.placeholder.com/110" alt="QR Code E-MEC" class="emec-qrcode">
+              <span class="emec-txt">CONSULTE O<br>CADASTRO ÍTALO<br>NO E-MEC</span>
+            </a>
           </div>
         </div>
-        
+
         <div class="contact-block no-margin">
           <h3>Localização:</h3>
-          <p class="address-text">Av. João Dias, 2046</p>
-          <p class="address-text">Santo Amaro - São Paulo-SP</p>
-          <p class="address-text">04724-003</p>
+          <a class="footer-contact-line footer-location" href="https://maps.app.goo.gl/" target="_blank" rel="noopener">
+            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/></svg>
+            <span class="footer-address-stack">
+              <span>Av. João Dias, 2046</span>
+              <span>Santo Amaro - São Paulo-SP</span>
+              <span>04724-003</span>
+            </span>
+          </a>
           <span class="obs">( Próximo ao Terminal João Dias )</span>
         </div>
       </div>
@@ -7566,21 +8025,28 @@ video {
 
     <div class="footer-bottom">
       <div class="bottom-layout">
-        
+
         <div class="brand-logo">
-          <img src="UNI ITALO LOGO.png" alt="Logo Único">
+          <img src="UNI ITALO LOGO.png" alt="Logo Uni Ítalo">
         </div>
-        
+
         <div class="copyright-text">
           <p>INSTITUIÇÃO EDUCACIONAL PROFESSOR PASQUALE CASCINO - CNPJ:43.371.723/0001-00</p>
           <p>"Em vão trabalham os operários se o Senhor não construir a casa" (Sl 126,1)</p>
-          <p>&copy; 2026 Ítalo&reg; - Todos os Direitos Reservados</p>
+          <p>&copy; 2025 Italo&reg; - Todos os Direitos Reservados</p>
         </div>
-        
-        <div class="social-icons">
-          <img src="incos.png" alt="">
+
+        <div class="social-area">
+          <h3>Siga-nos</h3>
+          <div class="social-icons" aria-label="Redes sociais da Uni Ítalo">
+            <a class="social-link" href="https://www.instagram.com/uniitalo/" target="_blank" rel="noopener" aria-label="Instagram da Uni Ítalo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9Zm4.5 3.7A4.3 4.3 0 1 1 12 16.3a4.3 4.3 0 0 1 0-8.6Zm0 2A2.3 2.3 0 1 0 12 14.3a2.3 2.3 0 0 0 0-4.6Zm4.55-2.85a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg></a>
+            <a class="social-link" href="https://www.facebook.com/uniitalosp/" target="_blank" rel="noopener" aria-label="Facebook da Uni Ítalo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 8.5V6.7c0-.86.2-1.3 1.36-1.3H17V2.22A20.3 20.3 0 0 0 14.58 2C12.18 2 10.5 3.47 10.5 6.17V8.5H8v3.56h2.5V22H14v-9.94h2.82l.43-3.56H14Z"/></svg></a>
+            <a class="social-link" href="https://www.youtube.com/@uniitalo" target="_blank" rel="noopener" aria-label="YouTube da Uni Ítalo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.58 7.19a2.68 2.68 0 0 0-1.89-1.9C18.02 4.84 12 4.84 12 4.84s-6.02 0-7.69.45a2.68 2.68 0 0 0-1.89 1.9A27.84 27.84 0 0 0 2 12a27.84 27.84 0 0 0 .42 4.81 2.68 2.68 0 0 0 1.89 1.9c1.67.45 7.69.45 7.69.45s6.02 0 7.69-.45a2.68 2.68 0 0 0 1.89-1.9A27.84 27.84 0 0 0 22 12a27.84 27.84 0 0 0-.42-4.81ZM10 15.2V8.8l5.2 3.2L10 15.2Z"/></svg></a>
+            <a class="social-link" href="https://www.linkedin.com/school/uniitalosp/" target="_blank" rel="noopener" aria-label="LinkedIn da Uni Ítalo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.4 2.4 0 1 1 0 4.8 2.4 2.4 0 0 1 0-4.8ZM3 9h4v12H3V9Zm6.3 0h3.8v1.64h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.31-.02-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V21h-4V9Z"/></svg></a>
+            <a class="social-link" href="https://x.com/uniitalo" target="_blank" rel="noopener" aria-label="X da Uni Ítalo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.86 10.47 21.15 2h-1.73l-6.33 7.35L8.04 2H2.22l7.64 11.12L2.22 22h1.73l6.68-7.76L15.96 22h5.82l-7.92-11.53Zm-2.36 2.74-.78-1.11L4.56 3.3h2.65l4.97 7.1.77 1.11 6.47 9.25h-2.65l-5.27-7.55Z"/></svg></a>
+          </div>
         </div>
-        
+
       </div>
     </div>
   </footer>
@@ -8835,6 +9301,101 @@ if(interestForm){
   });
 }
 </script>
+
+
+
+<script>
+/* =========================================================
+   TROCA DE IDIOMA PT/EN
+   - Usa botão próprio da página
+   - Aciona a tradução real da página para inglês
+   - Preserva a versão em português como idioma base
+   ========================================================= */
+(function () {
+  const BASE_LANG = "pt";
+  const STORAGE_KEY = "uniitalo_language";
+
+  function setGoogleCookie(lang) {
+    const value = `/pt/${lang}`;
+    const host = location.hostname;
+    document.cookie = `googtrans=${value};path=/`;
+    if (host && host.includes(".")) {
+      document.cookie = `googtrans=${value};domain=.${host};path=/`;
+      document.cookie = `googtrans=${value};domain=${host};path=/`;
+    }
+  }
+
+  function updateButtons(lang) {
+    document.querySelectorAll("[data-language-option]").forEach((btn) => {
+      const active = btn.dataset.languageOption === lang;
+      btn.classList.toggle("active", active);
+      btn.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+  }
+
+  function applyLanguageClass(lang) {
+    document.documentElement.lang = lang === "en" ? "en" : "pt-BR";
+    document.body.classList.toggle("site-lang-en", lang === "en");
+    document.body.classList.toggle("site-lang-pt", lang !== "en");
+  }
+
+  function changeGoogleSelect(lang, attempt = 0) {
+    const select = document.querySelector("select.goog-te-combo");
+
+    if (select) {
+      const googleLang = lang === "en" ? "en" : BASE_LANG;
+      select.value = googleLang;
+      select.dispatchEvent(new Event("change"));
+      select.dispatchEvent(new Event("change", { bubbles: true }));
+      return true;
+    }
+
+    if (attempt < 50) {
+      setTimeout(() => changeGoogleSelect(lang, attempt + 1), 180);
+    }
+
+    return false;
+  }
+
+  function setLanguage(lang) {
+    const normalizedLang = lang === "en" ? "en" : "pt";
+    localStorage.setItem(STORAGE_KEY, normalizedLang);
+    updateButtons(normalizedLang);
+    applyLanguageClass(normalizedLang);
+    setGoogleCookie(normalizedLang === "en" ? "en" : "pt");
+    changeGoogleSelect(normalizedLang);
+  }
+
+  window.googleTranslateElementInit = function () {
+    new google.translate.TranslateElement({
+      pageLanguage: "pt",
+      includedLanguages: "pt,en",
+      autoDisplay: false
+    }, "google_translate_element");
+
+    const savedLanguage = localStorage.getItem(STORAGE_KEY) || "pt";
+    if (savedLanguage === "en") {
+      setTimeout(() => setLanguage("en"), 450);
+    } else {
+      updateButtons("pt");
+      applyLanguageClass("pt");
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const savedLanguage = localStorage.getItem(STORAGE_KEY) || "pt";
+    updateButtons(savedLanguage);
+    applyLanguageClass(savedLanguage);
+
+    document.querySelectorAll("[data-language-option]").forEach((btn) => {
+      btn.addEventListener("click", function () {
+        setLanguage(this.dataset.languageOption);
+      });
+    });
+  });
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
