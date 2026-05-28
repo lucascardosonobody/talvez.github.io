@@ -6118,6 +6118,61 @@ small {
   }
 }
 
+
+
+/* =========================================================
+   AJUSTES SOLICITADOS — FOOTER E MANUAL NO MOBILE
+   - Mantém títulos do footer alinhados à esquerda em telas menores.
+   - Mantém subtítulos do Manual de Mobilidade alinhados à esquerda.
+   - Corrige o menu principal: orientações de estrangeiros ficam no tópico 3 do manual.
+   ========================================================= */
+@media (max-width: 768px) {
+  .footer-main .footer-col h3,
+  .footer-main .contact-block h3,
+  .footer-main .social-area h3 {
+    text-align: left !important;
+  }
+
+  .footer-main .contact-block,
+  .footer-main .footer-links,
+  .footer-main .emec-section,
+  .footer-main .address-text,
+  .footer-main .footer-contact-line {
+    text-align: left !important;
+  }
+
+  .footer-main .social-area {
+    align-items: flex-start !important;
+    text-align: left !important;
+    width: 100%;
+  }
+
+  .footer-main .social-icons {
+    justify-content: flex-start !important;
+  }
+
+  .manual-section .section-title-left,
+  .manual-section .section-title-left h2,
+  .manual-section .section-title-left p,
+  .manual-section .eyebrow,
+  .manual-section .manual-card-passaporte,
+  .manual-section .badge-card,
+  .manual-section h3,
+  .manual-section h4,
+  .manual-section h5,
+  .manual-section .sub-modalidade h4,
+  .manual-section .card-p-texto,
+  .manual-section .manual-lista {
+    text-align: left !important;
+  }
+
+  .manual-section .section-title-left h2,
+  .manual-section .section-title-left p {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
 </style>
 
 
@@ -6161,11 +6216,10 @@ small {
     <a href="#pesquisa" class="item-link-premium link-composto"><span class="parte-destaque">5- Pesquisa e Cooperação Científica</span></a>
     <a href="#eventos" class="item-link-premium link-composto"><span class="parte-destaque">6- Eventos em todos os lugares do mundo</span></a>
     <a href="#manual" class="item-link-premium link-composto"><span class="parte-destaque">7- Manual de Mobilidade Acadêmica para brasileiros</span></a>
-    <a href="#q" class="item-link-premium link-composto"><span class="parte-destaque">8- Orientações de Mobilidade Acadêmica para Estrangeiros</span></a>
-    <a href="#diretrizes" class="item-link-premium link-composto"><span class="parte-destaque">9- Diretrizes para Pesquisa Internacional</span></a>
-    <a href="#regimento" class="item-link-premium link-composto"><span class="parte-destaque">10- Regimento Interno da Internacionalização</span></a>
-    <a href="#conselho" class="item-link-premium link-composto"><span class="parte-destaque">11- Conselho Diretor</span></a>
-    <a href="#contato" class="item-link-premium link-composto"><span class="parte-destaque">12- Contato</span></a>
+    <a href="#diretrizes" class="item-link-premium link-composto"><span class="parte-destaque">8- Diretrizes para Pesquisa Internacional</span></a>
+    <a href="#regimento" class="item-link-premium link-composto"><span class="parte-destaque">9- Regimento Interno da Internacionalização</span></a>
+    <a href="#conselho" class="item-link-premium link-composto"><span class="parte-destaque">10- Conselho Diretor</span></a>
+    <a href="#contato" class="item-link-premium link-composto"><span class="parte-destaque">11- Contato</span></a>
   </nav>
 
 </aside>
@@ -7000,7 +7054,7 @@ small {
     <div class="section-title-left">
       <div class="eyebrow">Guia Prático &amp; Modelos</div>
       <h2>Manual de Mobilidade Acadêmica Internacional</h2>
-      <p>Instruções essenciais, processos para alunos brasileiros (Outgoing), estrangeiros (Incoming) e modelos contratuais.</p>
+      <p>Instruções essenciais, processos para alunos brasileiros (Outgoing), estrangeiros (entrada) e modelos contratuais.</p>
     </div>
 
     <div class="manual-intro-box">
@@ -7020,7 +7074,7 @@ small {
         </div>
         <div class="jornada-passo" data-target="m-incoming">
           <div class="jornada-dot" id="Estrangeiro">3</div>
-          <span>Alunos Estrangeiros (Incoming)</span>
+          <span>Alunos Estrangeiros (entrada)</span>
         </div>
         <div class="jornada-passo" data-target="m-planejamento">
           <div class="jornada-dot">4</div>
@@ -7149,7 +7203,7 @@ small {
 
         <div class="manual-bloco" id="m-incoming">
           <div class="manual-card-passaporte verde">
-            <div class="badge-card" id="q">6- Orientações para alunos estrangeiros (“Incoming”)</div>
+            <div class="badge-card" id="q">3- Orientações para alunos estrangeiros (entrada)</div>
             <p class="card-p-texto">Os estudantes estrangeiros deverão:</p>
             <ul class="manual-lista">
               <li>1-Apresentar documentação exigida</li>
