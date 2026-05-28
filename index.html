@@ -6057,6 +6057,67 @@ small {
   }
 }
 
+
+
+/* =========================================================
+   AJUSTE FINAL — MENU DE NAVEGAÇÃO LATERAL
+   - Painel ocupa 50% da largura da página
+   - Hover sem fundo, sem borda e sem deslocamento atrás das palavras
+   ========================================================= */
+.painel-navegacao-premium {
+  width: 50vw !important;
+  right: -50vw !important;
+  max-width: none !important;
+}
+
+.painel-navegacao-premium.ativo {
+  right: 0 !important;
+}
+
+.item-link-premium:hover {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+  color: var(--vermelho) !important;
+  padding-left: 20px !important;
+}
+
+.item-link-premium:hover .parte-destaque {
+  letter-spacing: normal !important;
+  color: var(--vermelho) !important;
+}
+
+@media (max-width: 992px) {
+  .painel-navegacao-premium {
+    width: 50vw !important;
+    right: -50vw !important;
+  }
+
+  .painel-navegacao-premium.ativo {
+    right: 0 !important;
+  }
+
+  .item-link-premium:hover {
+    padding-left: 10px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .painel-navegacao-premium {
+    width: 50vw !important;
+    right: -50vw !important;
+  }
+
+  .painel-navegacao-premium.ativo {
+    right: 0 !important;
+  }
+
+  .item-link-premium:hover {
+    padding-left: 5px !important;
+  }
+}
+
 </style>
 
 
