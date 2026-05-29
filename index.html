@@ -6061,12 +6061,13 @@ small {
 
 /* =========================================================
    AJUSTE FINAL — MENU DE NAVEGAÇÃO LATERAL
-   - Painel ocupa 50% da largura da página
+   - Monitores/Desktop: painel ocupa 35% da largura
+   - Celulares/tablets menores: painel ocupa 50% da largura
    - Hover sem fundo, sem borda e sem deslocamento atrás das palavras
    ========================================================= */
 .painel-navegacao-premium {
-  width: 50vw !important;
-  right: -50vw !important;
+  width: 35vw !important;
+  right: -35vw !important;
   max-width: none !important;
 }
 
@@ -6088,7 +6089,7 @@ small {
   color: var(--vermelho) !important;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .painel-navegacao-premium {
     width: 50vw !important;
     right: -50vw !important;
@@ -6104,15 +6105,6 @@ small {
 }
 
 @media (max-width: 576px) {
-  .painel-navegacao-premium {
-    width: 50vw !important;
-    right: -50vw !important;
-  }
-
-  .painel-navegacao-premium.ativo {
-    right: 0 !important;
-  }
-
   .item-link-premium:hover {
     padding-left: 5px !important;
   }
@@ -6216,10 +6208,11 @@ small {
     <a href="#pesquisa" class="item-link-premium link-composto"><span class="parte-destaque">5- Pesquisa e Cooperação Científica</span></a>
     <a href="#eventos" class="item-link-premium link-composto"><span class="parte-destaque">6- Eventos em todos os lugares do mundo</span></a>
     <a href="#manual" class="item-link-premium link-composto"><span class="parte-destaque">7- Manual de Mobilidade Acadêmica para brasileiros</span></a>
-    <a href="#diretrizes" class="item-link-premium link-composto"><span class="parte-destaque">8- Diretrizes para Pesquisa Internacional</span></a>
-    <a href="#regimento" class="item-link-premium link-composto"><span class="parte-destaque">9- Regimento Interno da Internacionalização</span></a>
-    <a href="#conselho" class="item-link-premium link-composto"><span class="parte-destaque">10- Conselho Diretor</span></a>
-    <a href="#contato" class="item-link-premium link-composto"><span class="parte-destaque">11- Contato</span></a>
+    <a href="#manual" class="item-link-premium link-composto" data-manual-jump="m-incoming"><span class="parte-destaque">8- Manual de Mobilidade Acadêmica para estrangeiros</span></a>
+    <a href="#diretrizes" class="item-link-premium link-composto"><span class="parte-destaque">9- Diretrizes para Pesquisa Internacional</span></a>
+    <a href="#regimento" class="item-link-premium link-composto"><span class="parte-destaque">10- Regimento Interno da Internacionalização</span></a>
+    <a href="#conselho" class="item-link-premium link-composto"><span class="parte-destaque">11- Conselho Diretor</span></a>
+    <a href="#contato" class="item-link-premium link-composto"><span class="parte-destaque">12- Contato</span></a>
   </nav>
 
 </aside>
@@ -9510,7 +9503,57 @@ if(interestForm){
   });
 })();
 </script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+
+/* =========================================================
+   ATALHO DO MENU — MANUAL PARA ALUNOS ESTRANGEIROS
+   Ao clicar no item do menu, abre o Manual de Mobilidade Acadêmica
+   diretamente no tópico 3: Alunos Estrangeiros (entrada).
+   ========================================================= */
+document.addEventListener("DOMContentLoaded", function () {
+  const atalhosManual = document.querySelectorAll("[data-manual-jump]");
+
+  function abrirTopicoManual(alvoId) {
+    const secaoManual = document.getElementById("manual");
+    const passos = document.querySelectorAll(".manual-section .jornada-passo");
+    const blocos = document.querySelectorAll(".manual-section .manual-bloco");
+    const blocoAlvo = document.getElementById(alvoId);
+
+    if (!secaoManual || !blocoAlvo) return;
+
+    passos.forEach(function (passo) {
+      passo.classList.toggle("ativo", passo.getAttribute("data-target") === alvoId);
+    });
+
+    blocos.forEach(function (bloco) {
+      bloco.classList.remove("active");
+      bloco.classList.remove("ativo");
+    });
+
+    blocoAlvo.classList.add("active");
+
+    requestAnimationFrame(function () {
+      secaoManual.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
+  atalhosManual.forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      const painel = document.getElementById("painelNavegacao");
+      const camadaDesfoque = document.getElementById("camadaDesfoque");
+      const alvoId = this.getAttribute("data-manual-jump");
+
+      if (painel) painel.classList.remove("ativo");
+      if (camadaDesfoque) camadaDesfoque.classList.remove("ativo");
+      document.body.style.overflow = "";
+
+      abrirTopicoManual(alvoId);
+    });
+  });
+});
+</script>
 
 </body>
 </html>
