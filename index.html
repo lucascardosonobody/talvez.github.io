@@ -9503,16 +9503,15 @@ if(interestForm){
   });
 })();
 </script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+<script>
 /* =========================================================
    ATALHO DO MENU — MANUAL PARA ALUNOS ESTRANGEIROS
-   Ao clicar no item do menu, abre o Manual de Mobilidade Acadêmica
-   diretamente no tópico 3: Alunos Estrangeiros (entrada).
+   Corrigido: este script precisa ficar em uma tag própria,
+   separada do script externo do Google Translate.
    ========================================================= */
-document.addEventListener("DOMContentLoaded", function () {
-  const atalhosManual = document.querySelectorAll("[data-manual-jump]");
-
+(function () {
   function abrirTopicoManual(alvoId) {
     const secaoManual = document.getElementById("manual");
     const passos = document.querySelectorAll(".manual-section .jornada-passo");
@@ -9522,7 +9521,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!secaoManual || !blocoAlvo) return;
 
     passos.forEach(function (passo) {
-      passo.classList.toggle("ativo", passo.getAttribute("data-target") === alvoId);
+      const ativo = passo.getAttribute("data-target") === alvoId;
+      passo.classList.toggle("ativo", ativo);
+      passo.setAttribute("aria-selected", ativo ? "true" : "false");
     });
 
     blocos.forEach(function (bloco) {
@@ -9532,27 +9533,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
     blocoAlvo.classList.add("active");
 
-    requestAnimationFrame(function () {
+    setTimeout(function () {
       secaoManual.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
+    }, 80);
   }
 
-  atalhosManual.forEach(function (link) {
-    link.addEventListener("click", function (event) {
-      event.preventDefault();
+  window.abrirTopicoManualMobilidade = abrirTopicoManual;
 
-      const painel = document.getElementById("painelNavegacao");
-      const camadaDesfoque = document.getElementById("camadaDesfoque");
-      const alvoId = this.getAttribute("data-manual-jump");
+  document.addEventListener("DOMContentLoaded", function () {
+    const atalhosManual = document.querySelectorAll("[data-manual-jump]");
 
-      if (painel) painel.classList.remove("ativo");
-      if (camadaDesfoque) camadaDesfoque.classList.remove("ativo");
-      document.body.style.overflow = "";
+    atalhosManual.forEach(function (link) {
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
 
-      abrirTopicoManual(alvoId);
+        const painel = document.getElementById("painelNavegacao");
+        const camadaDesfoque = document.getElementById("camadaDesfoque");
+        const alvoId = this.getAttribute("data-manual-jump") || "m-incoming";
+
+        if (painel) painel.classList.remove("ativo");
+        if (camadaDesfoque) camadaDesfoque.classList.remove("ativo");
+        document.body.style.overflow = "";
+
+        abrirTopicoManual(alvoId);
+      });
     });
   });
-});
+})();
 </script>
 
 </body>
