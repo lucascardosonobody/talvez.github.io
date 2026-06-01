@@ -6165,6 +6165,242 @@ small {
   }
 }
 
+
+
+/* =========================================================
+   AJUSTE FINAL — POPUP DAS PARCERIAS NO CELULAR
+   - Remove barra de scroll interna do popup
+   - Mantém o popup centralizado com margens iguais à esquerda e à direita
+   - Compacta títulos, descrição, cards e botões para caber melhor na tela
+   ========================================================= */
+
+.parceria-modal-overlay {
+  overflow: hidden !important;
+}
+
+.parceria-modal {
+  width: min(680px, calc(100vw - 32px));
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden !important;
+  scrollbar-width: none;
+}
+
+.parceria-modal::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .parceria-modal-overlay {
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 12px 14px !important;
+    overflow: hidden !important;
+  }
+
+  .parceria-modal {
+    width: calc(100vw - 28px) !important;
+    max-width: calc(100vw - 28px) !important;
+    max-height: calc(100dvh - 24px) !important;
+    margin: 0 auto !important;
+    padding: 18px 16px 14px !important;
+    border-radius: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+  }
+
+  .pm-header {
+    margin-bottom: 8px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .pm-country-pill {
+    padding: 6px 12px !important;
+    font-size: .78rem !important;
+  }
+
+  .pm-close {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: .9rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  .pm-title {
+    font-size: clamp(1.18rem, 5.2vw, 1.55rem) !important;
+    line-height: 1.06 !important;
+    margin-bottom: 7px !important;
+    text-align: left !important;
+  }
+
+  .pm-desc {
+    font-size: .82rem !important;
+    line-height: 1.38 !important;
+    margin-bottom: 12px !important;
+    padding-left: 10px !important;
+    border-left-width: 2px !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden !important;
+  }
+
+  .pm-unis-grid {
+    gap: 8px !important;
+    margin-bottom: 12px !important;
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .pm-uni-card {
+    padding: 10px 11px !important;
+    gap: 10px !important;
+    border-radius: 14px !important;
+    min-height: 0 !important;
+    align-items: center !important;
+    box-shadow: 0 5px 14px rgba(0,71,55,.07) !important;
+  }
+
+  .pm-uni-card::before {
+    width: 3px !important;
+  }
+
+  .pm-uni-card:hover {
+    transform: none !important;
+  }
+
+  .pm-uni-icon-wrap {
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 11px !important;
+  }
+
+  .pm-uni-photo,
+  .pm-uni-photo-placeholder {
+    border-radius: 10px !important;
+  }
+
+  .pm-placeholder-svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .pm-uni-num {
+    font-size: .57rem !important;
+    margin-bottom: 1px !important;
+    letter-spacing: .06em !important;
+  }
+
+  .pm-uni-name {
+    font-size: .82rem !important;
+    line-height: 1.15 !important;
+    margin-bottom: 2px !important;
+    text-align: left !important;
+  }
+
+  .pm-uni-detail {
+    font-size: .68rem !important;
+    line-height: 1.22 !important;
+  }
+
+  .pm-footer {
+    padding-top: 10px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .pm-nav {
+    gap: 8px !important;
+  }
+
+  .pm-nav-btn {
+    min-width: 72px !important;
+    padding: 8px 11px !important;
+    font-size: .72rem !important;
+    text-align: center !important;
+  }
+
+  .pm-nav-dots {
+    gap: 5px !important;
+  }
+
+  .pm-nav-dots .dot {
+    width: 6px !important;
+    height: 6px !important;
+  }
+
+  .pm-nav-dots .dot.active {
+    width: 16px !important;
+  }
+}
+
+@media (max-width: 380px), (max-height: 680px) {
+  .parceria-modal {
+    max-height: calc(100dvh - 18px) !important;
+    padding: 14px 12px 12px !important;
+    border-radius: 18px !important;
+  }
+
+  .pm-desc {
+    -webkit-line-clamp: 2;
+    margin-bottom: 9px !important;
+  }
+
+  .pm-uni-card {
+    padding: 8px 9px !important;
+    gap: 8px !important;
+  }
+
+  .pm-uni-icon-wrap {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .pm-uni-name {
+    font-size: .76rem !important;
+  }
+
+  .pm-uni-detail {
+    font-size: .63rem !important;
+  }
+
+  .pm-footer {
+    padding-top: 8px !important;
+  }
+
+  .pm-nav-btn {
+    min-width: 66px !important;
+    padding: 7px 9px !important;
+    font-size: .68rem !important;
+  }
+}
+
+@media (max-height: 560px) {
+  .pm-desc {
+    display: none !important;
+  }
+
+  .pm-title {
+    font-size: 1.15rem !important;
+  }
+
+  .pm-country-pill {
+    padding: 5px 10px !important;
+    font-size: .7rem !important;
+  }
+
+  .pm-uni-icon-wrap {
+    display: none !important;
+  }
+
+  .pm-uni-card {
+    padding: 7px 9px !important;
+  }
+}
+
 </style>
 
 
