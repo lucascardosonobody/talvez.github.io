@@ -5665,6 +5665,52 @@ video {
 
 
 
+
+/* =========================================================
+   RESPONSIVO ESPECÍFICO — GALERIA DA OFICINA 1
+   Mantém o ajuste limitado ao bloco "Chefia e cooperação internacional"
+   ========================================================= */
+#p-madrid-1 .galeria-chefia-internacional {
+  margin-top: 30px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+#p-madrid-1 .galeria-chefia-internacional .etiqueta-figura {
+  color: #004737;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+#p-madrid-1 .galeria-chefia-internacional .galeria-modulo-preparatorio {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+#p-madrid-1 .galeria-chefia-internacional .foto-relatorio {
+  min-width: 0;
+}
+
+@media (max-width: 1100px) {
+  #p-madrid-1 .galeria-chefia-internacional .galeria-modulo-preparatorio {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  #p-madrid-1 .galeria-chefia-internacional {
+    padding: 14px;
+    margin-top: 22px;
+  }
+
+  #p-madrid-1 .galeria-chefia-internacional .galeria-modulo-preparatorio {
+    grid-template-columns: 1fr;
+  }
+
+  #p-madrid-1 .galeria-chefia-internacional .foto-relatorio.foto-vertical {
+    aspect-ratio: 4 / 5;
+  }
+}
+
 /* =========================================================
    RESPONSIVO — BLOCO CINEMA
    ========================================================= */
@@ -6409,8 +6455,8 @@ small {
 <header class="header">
 
   <div class="language-switcher notranslate" aria-label="Selecionar idioma / Select language">
-    <button class="lang-btn active" type="button" data-language-option="pt" aria-pressed="true">PT</button>
-    <button class="lang-btn" type="button" data-language-option="en" aria-pressed="false">EN</button>
+    <button class="lang-btn active" type="button" data-language-option="pt" aria-pressed="true">🇧🇷</button>
+    <button class="lang-btn" type="button" data-language-option="en" aria-pressed="false">🇺🇸</button>
   </div>
   <div id="google_translate_element" class="notranslate" aria-hidden="true"></div>
 
@@ -6745,7 +6791,8 @@ small {
 
     <div class="bloco-introducao-primeiro">
       O primeiro, em outubro de 2022, da UNED – Universidade Nacional de Educação de Madri- Espanha, o doutorando Major Juan Manuel Ramos Santamaria. <br><br>
-      Em 2024, 2025 e 2026 o Professor Dr. Alexandre Evangelista foi representar o UNIITALO em Congressos Internacionais. <br> <br>Foram eles:
+      Ele nos ofereceu como Atividades Acadêmicas, algumas oficinas, que foram organizadas pelos Professor Dr. Jerley Pereira da Silva e Professora Pós-doc. Ana Maria Ramos Sanchez Varella.<br><br>
+      Foram: 
     </div>
 
     <div class="projetos-grid-main">
@@ -6785,6 +6832,29 @@ small {
             <p>O Major Juan orientou os estudantes a desenvolver suas habilidades, gerar conhecimentos e com essas aprendizagens buscar inovações, seja na alfabetização digital ou no próprio processo de desenvolvimento pessoal and profissional. O destaque foi dado ao desenvolvimento da inteligência emocional, porque o movimento das empresas públicas ou privadas levam o indivíduo a lidar com os desafios atuais.</p>
             <p>Destacou também a importância das habilidades brandas (soft skills). Elas são fundamentais para atrair e reter talentos. Ele citou as mudanças das dinâmicas nas Empresas. Exemplificou os Estados Unidos, que somente em 2021 demitiram 47 milhões de trabalhadores, por diferentes fatores, até mesmo por ambiente de trabalho ruim, falta de reconhecimento etc.</p>
             <p>No final os estudantes puderam refletir, questionar e saíram com diferentes possibilidades para o repensar de suas atitudes. </p>
+
+
+            <div class="container-imagem-relatorio galeria-relatorio-wrapper galeria-chefia-internacional">
+              <div class="etiqueta-figura">Registros da oficina “Chefia e cooperação internacional nas organizações privadas e públicas no século XXI”:</div>
+
+              <div class="galeria-relatorio-coimbra galeria-modulo-preparatorio">
+                <figure class="foto-relatorio foto-vertical">
+                  <img src="Módulo preparatório (EAD – Brasil)1.png" alt="Oficina Chefia e cooperação internacional - foto 1" loading="lazy">
+                </figure>
+
+                <figure class="foto-relatorio foto-vertical">
+                  <img src="Módulo preparatório (EAD – Brasil)2.png" alt="Oficina Chefia e cooperação internacional - foto 2" loading="lazy">
+                </figure>
+
+                <figure class="foto-relatorio foto-vertical">
+                  <img src="Módulo preparatório (EAD – Brasil)3.png" alt="Oficina Chefia e cooperação internacional - foto 3" loading="lazy">
+                </figure>
+
+                <figure class="foto-relatorio foto-vertical">
+                  <img src="Módulo preparatório (EAD – Brasil)4.png" alt="Oficina Chefia e cooperação internacional - foto 4" loading="lazy">
+                </figure>
+              </div>
+            </div>
           </div>
         </div>
 
