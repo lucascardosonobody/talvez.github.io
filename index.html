@@ -6658,7 +6658,7 @@ small {
    ========================================================= */
 
 .nh-globe-wrap {
-  width: clamp(440px, 72vw, 1040px) !important;
+  width: clamp(380px, 52vw, 760px) !important;
   max-width: 96vw !important;
   max-height: none !important;
   aspect-ratio: 1 / 1 !important;
@@ -6687,7 +6687,7 @@ small {
 
 @media (max-width: 900px) {
   .nh-globe-wrap {
-    width: min(92vw, 760px) !important;
+    width: min(92vw, 640px) !important;
   }
 }
 
@@ -6710,6 +6710,20 @@ small {
 @media (max-height: 640px) and (min-width: 768px) {
   .nh-globe-wrap {
     width: clamp(360px, 58vh, 560px) !important;
+  }
+}
+
+
+/* Ajuste final: desktop menor, celular preservado */
+@media (min-width: 901px) {
+  .nh-globe-wrap {
+    width: clamp(380px, 52vw, 760px) !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nh-globe-wrap {
+    width: min(720px, 48vw) !important;
   }
 }
 
@@ -9412,7 +9426,7 @@ function buildHeroSphere(features){
     .attr("stop-color", "#05352d");
 
   heroProjection = d3.geoOrthographic()
-    .scale(148)
+    .scale(142)
     .translate([160, 160])
     .clipAngle(90);
 
@@ -9421,14 +9435,14 @@ function buildHeroSphere(features){
   svg.append("circle")
     .attr("cx", 160)
     .attr("cy", 160)
-    .attr("r", 148)
+    .attr("r", 142)
     .attr("fill", "url(#heroOceanGradient)");
 
   heroGraticulePath = svg.append("path")
     .datum(d3.geoGraticule10())
     .attr("fill", "none")
-    .attr("stroke", "rgba(255,255,255,.18)")
-    .attr("stroke-width", 0.7);
+    .attr("stroke", "rgba(255,255,255,.10)")
+    .attr("stroke-width", 0.55);
 
   const landLayer = svg.append("g");
 
