@@ -6727,6 +6727,260 @@ small {
   }
 }
 
+
+/* =========================================================
+   AJUSTE FINAL — DESKTOP COM GLOBO GRANDE + TÍTULO VISÍVEL
+   Mantém o tamanho aprovado do globo no computador e sobe o título
+   para dentro da primeira dobra da tela, com leve sobreposição.
+   ========================================================= */
+@media (min-width: 901px) {
+  .hero {
+    min-height: 100svh !important;
+    height: 100svh !important;
+    overflow: hidden !important;
+  }
+
+  .nh-wrap {
+    min-height: 100svh !important;
+    padding-top: clamp(74px, 7.5vh, 92px) !important;
+    padding-bottom: clamp(12px, 2vh, 24px) !important;
+    justify-content: flex-start !important;
+  }
+
+  .nh-globe-wrap {
+    width: min(720px, 48vw) !important;
+    max-width: 96vw !important;
+    aspect-ratio: 1 / 1 !important;
+  }
+
+  .nh-title-block {
+    margin-top: clamp(-150px, -12vh, -78px) !important;
+    max-width: min(1120px, 95vw) !important;
+    position: relative !important;
+    z-index: 12 !important;
+  }
+
+  .nh-h1 {
+    gap: 0 !important;
+  }
+
+  .nh-w1 {
+    font-size: clamp(2rem, 3.8vw, 4.25rem) !important;
+    line-height: .96 !important;
+    text-shadow: 0 4px 20px rgba(0,0,0,.70), 0 1px 3px rgba(0,0,0,.75) !important;
+  }
+}
+
+@media (min-width: 901px) and (max-height: 820px) {
+  .nh-wrap {
+    padding-top: 70px !important;
+  }
+
+  .nh-title-block {
+    margin-top: -140px !important;
+  }
+
+  .nh-w1 {
+    font-size: clamp(1.85rem, 3.4vw, 3.2rem) !important;
+    line-height: .94 !important;
+  }
+}
+
+@media (min-width: 1200px) and (min-height: 821px) {
+  .nh-title-block {
+    margin-top: clamp(-150px, -10vh, -92px) !important;
+  }
+
+  .nh-w1 {
+    font-size: clamp(2.3rem, 4vw, 4.35rem) !important;
+  }
+}
+
+
+
+/* =========================================================
+   CORREÇÃO FINAL — TÍTULO SEM CORTE NO DESKTOP
+   Mantém o globo grande, mas aumenta a respiração das linhas
+   e ajusta telas baixas para o título não sair da primeira tela.
+   ========================================================= */
+@media (min-width: 901px) {
+  .hero {
+    min-height: 100svh !important;
+    height: 100svh !important;
+    overflow: hidden !important;
+  }
+
+  .nh-wrap {
+    min-height: 100svh !important;
+    padding-top: clamp(70px, 7vh, 90px) !important;
+    padding-bottom: 22px !important;
+  }
+
+  .nh-globe-wrap {
+    width: min(720px, 48vw) !important;
+  }
+
+  .nh-title-block {
+    margin-top: clamp(-118px, -9.5vh, -82px) !important;
+    padding: 0 0 .45rem 0 !important;
+    max-width: min(1120px, 95vw) !important;
+    overflow: visible !important;
+  }
+
+  .nh-h1,
+  .nh-w1 {
+    overflow: visible !important;
+  }
+
+  .nh-h1 {
+    gap: .03em !important;
+  }
+
+  .nh-w1 {
+    line-height: 1.08 !important;
+    font-size: clamp(2rem, 3.65vw, 4.05rem) !important;
+    padding-block: .03em !important;
+    text-shadow: 0 4px 20px rgba(0,0,0,.70), 0 1px 3px rgba(0,0,0,.75) !important;
+  }
+}
+
+@media (min-width: 901px) and (max-height: 820px) {
+  .nh-wrap {
+    padding-top: 68px !important;
+    padding-bottom: 16px !important;
+  }
+
+  .nh-globe-wrap {
+    width: min(660px, 78vh, 50vw) !important;
+  }
+
+  .nh-title-block {
+    margin-top: clamp(-112px, -13vh, -78px) !important;
+    padding-bottom: .3rem !important;
+  }
+
+  .nh-w1 {
+    font-size: clamp(1.72rem, 3.15vw, 3rem) !important;
+    line-height: 1.08 !important;
+  }
+}
+
+@media (min-width: 901px) and (max-height: 680px) {
+  .nh-globe-wrap {
+    width: min(600px, 74vh, 48vw) !important;
+  }
+
+  .nh-title-block {
+    margin-top: -84px !important;
+  }
+
+  .nh-w1 {
+    font-size: clamp(1.55rem, 2.8vw, 2.55rem) !important;
+  }
+}
+
+
+
+/* =========================================================
+   CORREÇÃO REAL — TÍTULO VISÍVEL NO COMPUTADOR
+   O título deixa de depender da altura do globo no fluxo normal.
+   Ele fica fixado dentro da primeira tela, sobrepondo o globo com segurança.
+   Mobile preservado.
+   ========================================================= */
+@media (min-width: 901px) {
+  .hero#inicio {
+    min-height: 100vh !important;
+    height: 100vh !important;
+    min-height: 100svh !important;
+    height: 100svh !important;
+    overflow: hidden !important;
+  }
+
+  .hero#inicio .nh-wrap {
+    position: relative !important;
+    min-height: 100vh !important;
+    height: 100vh !important;
+    min-height: 100svh !important;
+    height: 100svh !important;
+    padding: 0 clamp(14px, 4vw, 40px) !important;
+    display: block !important;
+  }
+
+  .hero#inicio .nh-globe-wrap {
+    position: absolute !important;
+    top: clamp(62px, 7vh, 88px) !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: min(720px, 50vw, 82svh) !important;
+    max-width: 96vw !important;
+    max-height: none !important;
+    margin: 0 !important;
+    z-index: 4 !important;
+  }
+
+  .hero#inicio .nh-title-block {
+    position: absolute !important;
+    left: 50% !important;
+    bottom: clamp(24px, 4.8vh, 58px) !important;
+    transform: translateX(-50%) !important;
+    width: min(1120px, 96vw) !important;
+    max-width: 96vw !important;
+    margin: 0 !important;
+    padding: 0 12px !important;
+    text-align: center !important;
+    overflow: visible !important;
+    z-index: 30 !important;
+    pointer-events: none !important;
+  }
+
+  .hero#inicio .nh-h1 {
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
+    overflow: visible !important;
+  }
+
+  .hero#inicio .nh-w1 {
+    display: block !important;
+    font-size: clamp(2rem, 3.55vw, 4rem) !important;
+    line-height: 1.04 !important;
+    padding-block: .025em !important;
+    overflow: visible !important;
+    text-shadow: 0 5px 22px rgba(0,0,0,.78), 0 1px 4px rgba(0,0,0,.85) !important;
+  }
+}
+
+@media (min-width: 901px) and (max-height: 760px) {
+  .hero#inicio .nh-globe-wrap {
+    top: 58px !important;
+    width: min(660px, 48vw, 78svh) !important;
+  }
+
+  .hero#inicio .nh-title-block {
+    bottom: 20px !important;
+  }
+
+  .hero#inicio .nh-w1 {
+    font-size: clamp(1.72rem, 3.1vw, 3.05rem) !important;
+    line-height: 1.04 !important;
+  }
+}
+
+@media (min-width: 901px) and (max-height: 640px) {
+  .hero#inicio .nh-globe-wrap {
+    top: 54px !important;
+    width: min(560px, 44vw, 72svh) !important;
+  }
+
+  .hero#inicio .nh-title-block {
+    bottom: 16px !important;
+  }
+
+  .hero#inicio .nh-w1 {
+    font-size: clamp(1.45rem, 2.6vw, 2.35rem) !important;
+  }
+}
+
 </style>
 
 
