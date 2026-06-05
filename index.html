@@ -7150,6 +7150,58 @@ small {
   }
 }
 
+
+
+/* =========================================================
+   AJUSTE — NOMES ABAIXO DAS LOGOS NOS AGRADECIMENTOS
+   Escopado somente para a esteira de instituições parceiras.
+   ========================================================= */
+.globe-section .agradecimento-logo-item {
+  height: clamp(120px, 10vw, 146px) !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  padding: 12px 16px !important;
+  text-align: center !important;
+}
+
+.globe-section .agradecimento-logo-item img {
+  width: 100% !important;
+  height: 64px !important;
+  max-height: 64px !important;
+  object-fit: contain !important;
+  flex: 0 0 auto !important;
+}
+
+.globe-section .agradecimento-logo-nome {
+  display: block !important;
+  color: var(--verde) !important;
+  font-size: clamp(.62rem, .72vw, .76rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.18 !important;
+  letter-spacing: .01em !important;
+  text-align: center !important;
+  max-width: 100% !important;
+}
+
+@media (max-width: 640px) {
+  .globe-section .agradecimento-logo-item {
+    width: 168px !important;
+    height: 118px !important;
+    padding: 10px 12px !important;
+    gap: 7px !important;
+  }
+
+  .globe-section .agradecimento-logo-item img {
+    height: 52px !important;
+    max-height: 52px !important;
+  }
+
+  .globe-section .agradecimento-logo-nome {
+    font-size: .62rem !important;
+    line-height: 1.15 !important;
+  }
+}
+
 </style>
 
 
@@ -7320,56 +7372,72 @@ small {
     <div class="agradecimentos-marquee" aria-label="Logos das universidades e instituições parceiras">
       <div class="agradecimentos-trilho">
         <div class="agradecimentos-grupo">
-          <div class="agradecimento-logo-item" title="Università Europea di Roma">
-            <img src="M.png" alt="Logo da Università Europea di Roma" loading="lazy">
-          </div>
           <div class="agradecimento-logo-item" title="Football Club Internazionale Milano">
-            <img src="Uer.png" alt="Logo do Football Club Internazionale Milano" loading="lazy">
+            <img src="M.png" alt="Logo do Football Club Internazionale Milano" loading="lazy">
+            <span class="agradecimento-logo-nome">Football Club Internazionale Milano</span>
+          </div>
+          <div class="agradecimento-logo-item" title="Università Europea di Roma">
+            <img src="Uer.png" alt="Logo da Università Europea di Roma" loading="lazy">
+            <span class="agradecimento-logo-nome">Università Europea di Roma</span>
           </div>
           <div class="agradecimento-logo-item" title="Universidad Nacional de Educación a Distancia">
             <img src="Uned.png" alt="Logo da Universidad Nacional de Educación a Distancia" loading="lazy">
+            <span class="agradecimento-logo-nome">Universidad Nacional de Educación a Distancia</span>
           </div>
           <div class="agradecimento-logo-item" title="Universidade de Coimbra">
             <img src="Universidade-de-Coimbra.png" alt="Logo da Universidade de Coimbra" loading="lazy">
+            <span class="agradecimento-logo-nome">Universidade de Coimbra</span>
           </div>
           <div class="agradecimento-logo-item" title="Faculdade de Direito da Universidade de Coimbra">
             <img src="Faculdade-de-Direito-da-Universidade-de-Coimbra.png" alt="Logo da Faculdade de Direito da Universidade de Coimbra" loading="lazy">
+            <span class="agradecimento-logo-nome">Faculdade de Direito da Universidade de Coimbra</span>
           </div>
           <div class="agradecimento-logo-item" title="Y IRCOM — École Supérieure des Humanités et du Management">
             <img src="ircom.png" alt="Logo da Y IRCOM — École Supérieure des Humanités et du Management" loading="lazy">
+            <span class="agradecimento-logo-nome">Y IRCOM — École Supérieure des Humanités et du Management</span>
           </div>
           <div class="agradecimento-logo-item" title="Universidade Ibero Americana">
             <img src="unibe.png" alt="Logo da Universidade Ibero Americana" loading="lazy">
+            <span class="agradecimento-logo-nome">Universidade Ibero Americana</span>
           </div>
           <div class="agradecimento-logo-item" title="San Ignacio University">
             <img src="siu.png" alt="Logo da San Ignacio University" loading="lazy">
+            <span class="agradecimento-logo-nome">San Ignacio University</span>
           </div>
         </div>
 
         <div class="agradecimentos-grupo" aria-hidden="true">
           <div class="agradecimento-logo-item">
             <img src="M.png" alt="" loading="lazy">
+            <span class="agradecimento-logo-nome">Football Club Internazionale Milano</span>
           </div>
           <div class="agradecimento-logo-item">
             <img src="Uer.png" alt="" loading="lazy">
+            <span class="agradecimento-logo-nome">Università Europea di Roma</span>
           </div>
           <div class="agradecimento-logo-item">
             <img src="Uned.png" alt="" loading="lazy">
+            <span class="agradecimento-logo-nome">Universidad Nacional de Educación a Distancia</span>
           </div>
           <div class="agradecimento-logo-item">
             <img src="Universidade-de-Coimbra.png" alt="" loading="lazy">
+            <span class="agradecimento-logo-nome">Universidade de Coimbra</span>
           </div>
           <div class="agradecimento-logo-item">
             <img src="Faculdade-de-Direito-da-Universidade-de-Coimbra.png" alt="" loading="lazy">
+            <span class="agradecimento-logo-nome">Faculdade de Direito da Universidade de Coimbra</span>
           </div>
           <div class="agradecimento-logo-item">
             <img src="ircom.png" alt="" loading="lazy">
+            <span class="agradecimento-logo-nome">Y IRCOM — École Supérieure des Humanités et du Management</span>
           </div>
           <div class="agradecimento-logo-item">
             <img src="unibe.png" alt="" loading="lazy">
+            <span class="agradecimento-logo-nome">Universidade Ibero Americana</span>
           </div>
           <div class="agradecimento-logo-item">
             <img src="siu.png" alt="" loading="lazy">
+            <span class="agradecimento-logo-nome">San Ignacio University</span>
           </div>
         </div>
       </div>
