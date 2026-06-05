@@ -6983,303 +6983,170 @@ small {
 
 
 /* =========================================================
-   DOCENTES E DISCENTES — CONEXÃO INTERNACIONAL NA ODONTOLOGIA
-   Bloco novo, escopado para não alterar a estética das demais seções.
+   AJUSTE SOLICITADO — APRESENTAÇÃO
+   Centraliza o bloco "Internacionalizar..." e justifica os textos.
+   Escopado apenas para a primeira parte da seção #apresentacao.
    ========================================================= */
-#docentes .odontologia-bloco-site {
-  margin: 0 0 50px;
+#apresentacao > .container:first-of-type > .section-title {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+  max-width: 960px !important;
 }
 
-#docentes .odontologia-topo-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  margin-bottom: 30px;
+#apresentacao > .container:first-of-type > .section-title .eyebrow {
+  display: inline-block !important;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
-#docentes .odontologia-topo-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
-  gap: 28px;
-  align-items: center;
-  padding: 34px 38px;
+#apresentacao > .container:first-of-type > .section-title h2 {
+  text-align: center !important;
+  width: 100% !important;
+  max-width: 980px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
-#docentes .odontologia-kicker {
-  display: inline-flex;
-  width: fit-content;
-  align-items: center;
-  padding: 5px 12px;
-  border-radius: 999px;
-  background: rgba(197, 155, 39, 0.12);
-  border: 1px solid rgba(197, 155, 39, 0.24);
-  color: #7a4f00;
-  font-size: .76rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: .05em;
-  margin-bottom: 12px;
+#apresentacao > .container:first-of-type > .section-title h2::after {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
-#docentes .odontologia-topo-card h2 {
-  color: #0d2e27;
-  font-size: clamp(1.45rem, 3vw, 2.2rem);
-  font-weight: 800;
-  line-height: 1.16;
-  margin: 0 0 10px;
-  letter-spacing: -0.02em;
+#apresentacao > .container:first-of-type > .section-title p {
+  max-width: 900px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: justify !important;
 }
 
-#docentes .odontologia-topo-card h3 {
-  color: #c59b27;
-  font-size: 1.08rem;
-  font-weight: 800;
-  margin: 0 0 16px;
+#apresentacao > .container:first-of-type > .intro-programa-grid {
+  grid-template-columns: minmax(0, 900px) !important;
+  justify-content: center !important;
+  max-width: 900px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
-#docentes .odontologia-topo-card p,
-#docentes .odontologia-card-texto p,
-#docentes .odontologia-evento p {
-  color: #334155;
-  font-size: .98rem;
-  line-height: 1.72;
-  margin: 0 0 14px;
-  text-align: justify;
+#apresentacao > .container:first-of-type > .intro-programa-grid .intro-programa-texto {
+  align-items: stretch !important;
 }
 
-#docentes .odontologia-topo-card p:last-child,
-#docentes .odontologia-card-texto p:last-child,
-#docentes .odontologia-evento p:last-child {
-  margin-bottom: 0;
+#apresentacao > .container:first-of-type > .intro-programa-grid .intro-programa-texto p {
+  text-align: justify !important;
 }
 
-#docentes .odontologia-marcas {
-  display: grid;
-  gap: 14px;
-}
-
-#docentes .odontologia-marca-box {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 14px;
-  padding: 16px;
-  min-height: 112px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#docentes .odontologia-marca-box img {
-  display: block;
-  max-width: 100%;
-  max-height: 96px;
-  object-fit: contain;
-}
-
-#docentes .odontologia-cards-texto {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  margin-bottom: 30px;
-}
-
-#docentes .odontologia-card-texto {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 14px;
-  padding: 26px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.035);
-}
-
-#docentes .odontologia-card-texto h3 {
-  color: #0d2e27;
-  font-size: 1.18rem;
-  font-weight: 800;
-  margin: 0 0 12px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #f1f5f9;
-}
-
-#docentes .odontologia-cronograma {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 22px;
-}
-
-#docentes .odontologia-evento {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.035);
-}
-
-#docentes .odontologia-evento-header {
-  background: #0d2e27;
-  padding: 20px 26px;
-  border-bottom: 4px solid #c59b27;
-}
-
-#docentes .odontologia-evento-header h3 {
-  color: #ffffff;
-  font-size: 1.18rem;
-  font-weight: 800;
-  line-height: 1.35;
-  margin: 0;
-}
-
-#docentes .odontologia-evento-corpo {
-  padding: 26px;
-}
-
-#docentes .odontologia-meta-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin-bottom: 22px;
-}
-
-#docentes .odontologia-meta-item {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 14px;
-  color: #334155;
-  font-size: .92rem;
-  line-height: 1.45;
-}
-
-#docentes .odontologia-meta-item strong {
-  display: block;
-  color: #0d2e27;
-  font-size: .78rem;
-  text-transform: uppercase;
-  letter-spacing: .04em;
-  margin-bottom: 4px;
-}
-
-#docentes .odontologia-galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
-  gap: 12px;
-  margin: 18px 0 22px;
-}
-
-#docentes .odontologia-foto {
-  display: block;
-  margin: 0;
-  border-radius: 12px;
-  overflow: hidden;
-  background: #e2e8f0;
-  border: 1px solid rgba(15, 23, 42, .08);
-  aspect-ratio: 4 / 5;
-  box-shadow: 0 10px 20px rgba(15, 23, 42, .07);
-}
-
-#docentes .odontologia-foto.horizontal {
-  aspect-ratio: 4 / 3;
-}
-
-#docentes .odontologia-foto img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center;
-  transition: transform .35s ease;
-}
-
-#docentes .odontologia-foto:hover img {
-  transform: scale(1.035);
-}
-
-#docentes .odontologia-apoio {
-  margin-top: 18px;
-  padding: 18px;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-}
-
-#docentes .odontologia-apoio h4 {
-  color: #0d2e27;
-  font-size: .95rem;
-  margin: 0 0 12px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: .03em;
-}
-
-#docentes .odontologia-logos-apoio {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 10px;
-  align-items: center;
-}
-
-#docentes .odontologia-logo-apoio {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 12px;
-  height: 78px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#docentes .odontologia-logo-apoio img {
-  display: block;
-  max-width: 100%;
-  max-height: 56px;
-  object-fit: contain;
-}
-
-@media (max-width: 900px) {
-  #docentes .odontologia-topo-grid,
-  #docentes .odontologia-cards-texto {
-    grid-template-columns: 1fr;
+/* Notebook/desktop: faz o texto da apresentação ocupar quase toda a largura da tela. */
+@media (min-width: 901px) {
+  #apresentacao > .container:first-of-type {
+    width: min(1800px, 94vw) !important;
+    max-width: none !important;
   }
 
-  #docentes .odontologia-marcas {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  #apresentacao > .container:first-of-type > .section-title {
+    max-width: min(1720px, 94vw) !important;
   }
 
-  #docentes .odontologia-meta-grid {
-    grid-template-columns: 1fr;
+  #apresentacao > .container:first-of-type > .section-title h2 {
+    max-width: min(1620px, 94vw) !important;
+  }
+
+  #apresentacao > .container:first-of-type > .section-title p {
+    max-width: min(1520px, 92vw) !important;
+  }
+
+  #apresentacao > .container:first-of-type > .intro-programa-grid {
+    grid-template-columns: minmax(0, min(1520px, 92vw)) !important;
+    max-width: min(1520px, 92vw) !important;
+    width: min(1520px, 92vw) !important;
   }
 }
 
-@media (max-width: 620px) {
-  #docentes .odontologia-topo-grid,
-  #docentes .odontologia-card-texto,
-  #docentes .odontologia-evento-corpo {
-    padding: 20px;
+
+/* =========================================================
+   AJUSTE SOLICITADO — APRESENTAÇÃO NO CELULAR
+   Dá mais respiro e impede que palavras sejam quebradas no meio.
+   Escopado apenas para a seção #apresentacao.
+   ========================================================= */
+@media (max-width: 768px) {
+  #apresentacao {
+    padding-top: 74px !important;
+    padding-bottom: 74px !important;
   }
 
-  #docentes .odontologia-evento-header {
-    padding: 18px 20px;
+  #apresentacao > .container:first-of-type {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 22px !important;
+    padding-right: 22px !important;
   }
 
-  #docentes .odontologia-marcas {
-    grid-template-columns: 1fr;
+  #apresentacao > .container:first-of-type > .section-title {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 36px !important;
   }
 
-  #docentes .odontologia-galeria {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
+  #apresentacao > .container:first-of-type > .section-title .eyebrow {
+    max-width: 100% !important;
+    line-height: 1.55 !important;
+    margin-bottom: 18px !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
   }
 
-  #docentes .odontologia-foto {
-    aspect-ratio: 4 / 5;
+  #apresentacao > .container:first-of-type > .section-title h2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    line-height: 1.18 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+  }
+
+  #apresentacao > .container:first-of-type > .section-title p,
+  #apresentacao > .container:first-of-type > .intro-programa-grid .intro-programa-texto p {
+    width: 100% !important;
+    max-width: 100% !important;
+    line-height: 1.9 !important;
+    text-align: justify !important;
+    text-align-last: left !important;
+    text-justify: inter-word !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+  }
+
+  #apresentacao > .container:first-of-type > .intro-programa-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-template-columns: 1fr !important;
+    margin-top: 34px !important;
+    gap: 28px !important;
+  }
+
+  #apresentacao > .container:first-of-type > .intro-programa-grid .intro-programa-texto {
+    gap: 24px !important;
   }
 }
 
-@media (max-width: 420px) {
-  #docentes .odontologia-galeria {
-    grid-template-columns: 1fr;
+@media (max-width: 480px) {
+  #apresentacao > .container:first-of-type {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  #apresentacao > .container:first-of-type > .section-title h2 {
+    font-size: clamp(1.55rem, 8vw, 2.05rem) !important;
   }
 }
 
@@ -7906,164 +7773,6 @@ small {
         </div>
       </div>
 
-    </div>
-
-
-
-    <div class="container-relatorio-coimbra odontologia-bloco-site">
-      <div class="tarjeta-titulo-coimbra">
-        <h2>Conexão Internacional na Odontologia:</h2>
-      </div>
-
-      <div class="corpo-relatorio-coimbra">
-        <div class="odontologia-topo-card">
-          <div class="odontologia-topo-grid">
-            <div>
-             
-              <h2>Conexão Internacional na Odontologia:</h2>
-              <h3>Imersão de Alta Performance</h3>
-              <p>O Centro Universitário Católico Ítalo Brasileiro consolida, mais uma vez, sua relevância no cenário odontológico global. Recentemente, tivemos a honra de receber um grupo de alunos internacionais para uma imersão exclusiva de 5 dias, focada no aprendizado e no acompanhamento da nossa metodologia de implantes odontológicos.</p>
-              <p>Sob as coordenações dos professores Alexandre Mendonça e João Baptista Ilha, as imersões foram desenhadas no formato VIP, oferecendo uma experiência intensiva e prática.</p>
-              <p>O cronograma clínico desafiou os participantes a irem além, cobrindo desde cirurgias simples até procedimentos de altíssima complexidade, como as técnicas de implantes zigomáticos e pterigoides.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="odontologia-cards-texto">
-          <div class="odontologia-card-texto">
-            <h3>Parcerias de Peso e Impacto Social</h3>
-            <p>Um treinamento desse nível só é possível graças ao suporte de grandes parcewiros. Contamos com a presença fundamental das empresas Dentoflex, DSP Biomedical, Dental Excellence e GOEn, que garantiram o padrão de excelência em insumos, inovação tecnológica e planejamento.</p>
-            <p>Além do ganho científico, as imersões carregam um forte compromisso social: toda a parte cirúrgica é doada aos pacientes assistidos pelo projeto. O cuidado e o respeito com a comunidade continuam mesmo após o término do curso, com o envio posterior de todos os exames de controle e acompanhamento dos resultados.</p>
-          </div>
-
-          <div class="odontologia-card-texto">
-            <h3>Intercâmbio Cultural e Acadêmico</h3>
-            <p>O grande diferencial desta jornada foi a sinergia gerada na clínica. Alunos brasileiros da graduação e da pós-graduação dividiram o mesmo espaço com os profissionais estrangeiros.</p>
-            <p>Essa convivência rica permitiu a troca de costumes, o entendimento de como a odontologia e o ensino se desenvolvem fora do país, e criou um ambiente de networking global profundamente positivo para todos os envolvidos.</p>
-          </div>
-        </div>
-
-        <div class="subsecao-relatorio">
-          <h4>Bastidores das imersões: a Odontologia na prática</h4>
-        </div>
-
-        <div class="odontologia-cronograma">
-
-          <article class="odontologia-evento">
-            <div class="odontologia-evento-header">
-              <h3>Data: 13/10/2025 a 17/10/2025</h3>
-            </div>
-            <div class="odontologia-evento-corpo">
-              <div class="odontologia-meta-grid">
-                <div class="odontologia-meta-item"><strong>País:</strong> Espanha</div>
-                <div class="odontologia-meta-item"><strong>Característica:</strong> Cirurgiões dentistas em aperfeiçoamento de cirurgias avançadas</div>
-                <div class="odontologia-meta-item"><strong>Centro Universitário Católico Ítalo Brasileiro</strong> Departamento de Odontologia</div>
-              </div>
-
-              <div class="odontologia-galeria" aria-label="Fotos da imersão da Espanha">
-                <figure class="odontologia-foto"><img src="odontologia_image1.jpeg" alt="Imersão internacional em odontologia - Espanha" loading="lazy"></figure>
-                <figure class="odontologia-foto"><img src="odontologia_image4.jpeg" alt="Imersão internacional em odontologia - Espanha" loading="lazy"></figure>
-                <figure class="odontologia-foto"><img src="odontologia_image5.jpeg" alt="Imersão internacional em odontologia - Espanha" loading="lazy"></figure>
-                <figure class="odontologia-foto"><img src="odontologia_image6.jpeg" alt="Imersão internacional em odontologia - Espanha" loading="lazy"></figure>
-                <figure class="odontologia-foto horizontal"><img src="odontologia_image7.jpeg" alt="Imersão internacional em odontologia - Espanha" loading="lazy"></figure>
-              </div>
-
-              <div class="odontologia-apoio">
-                <h4>Apoio:</h4>
-                <div class="odontologia-logos-apoio">
-                  <div class="odontologia-logo-apoio"><img src="odontologia_image8.png" alt="Dental Excellence" loading="lazy"></div>
-                  <div class="odontologia-logo-apoio"><img src="odontologia_image9.png" alt="DSP Biomedical" loading="lazy"></div>
-                  <div class="odontologia-logo-apoio"><img src="odontologia_image10.png" alt="Dentoflex" loading="lazy"></div>
-                  <div class="odontologia-logo-apoio"><img src="odontologia_image11.png" alt="GOEn" loading="lazy"></div>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="odontologia-evento">
-            <div class="odontologia-evento-header">
-              <h3>Data: 27/10/2025 a 30/10/2025</h3>
-            </div>
-            <div class="odontologia-evento-corpo">
-              <div class="odontologia-meta-grid">
-                <div class="odontologia-meta-item"><strong>País:</strong> Canadá</div>
-                <div class="odontologia-meta-item"><strong>Característica:</strong> Cirurgiões dentistas em aperfeiçoamento de cirurgias básicas.</div>
-                <div class="odontologia-meta-item"><strong>APOIO:</strong> APOIO:</div>
-              </div>
-
-              <div class="odontologia-galeria" aria-label="Fotos da imersão do Canadá">
-                <figure class="odontologia-foto horizontal"><img src="odontologia_image12.jpeg" alt="Imersão internacional em odontologia - Canadá" loading="lazy"></figure>
-                <figure class="odontologia-foto"><img src="odontologia_image13.jpeg" alt="Imersão internacional em odontologia - Canadá" loading="lazy"></figure>
-                <figure class="odontologia-foto horizontal"><img src="odontologia_image14.jpeg" alt="Imersão internacional em odontologia - Canadá" loading="lazy"></figure>
-                <figure class="odontologia-foto horizontal"><img src="odontologia_image15.jpeg" alt="Imersão internacional em odontologia - Canadá" loading="lazy"></figure>
-                <figure class="odontologia-foto horizontal"><img src="odontologia_image16.jpeg" alt="Imersão internacional em odontologia - Canadá" loading="lazy"></figure>
-                <figure class="odontologia-foto horizontal"><img src="odontologia_image17.jpeg" alt="Imersão internacional em odontologia - Canadá" loading="lazy"></figure>
-              </div>
-
-              <div class="odontologia-apoio">
-                <h4>APOIO:</h4>
-                <div class="odontologia-logos-apoio">
-                  <div class="odontologia-logo-apoio"><img src="odontologia_image10.png" alt="Dentoflex" loading="lazy"></div>
-                  <div class="odontologia-logo-apoio"><img src="odontologia_image11.png" alt="GOEn" loading="lazy"></div>
-                  <div class="odontologia-logo-apoio"><img src="odontologia_image8.png" alt="Dental Excellence" loading="lazy"></div>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="odontologia-evento">
-            <div class="odontologia-evento-header">
-              <h3>Data: 12/05/2025 a 15/05/2025</h3>
-            </div>
-            <div class="odontologia-evento-corpo">
-              <div class="odontologia-meta-grid">
-                <div class="odontologia-meta-item"><strong>País:</strong> Estados Unidos e Itália</div>
-                <div class="odontologia-meta-item"><strong>Característica:</strong> Cirurgiões dentistas em aperfeiçoamento de cirurgias básicas (EUA) e avançadas (Italiano).</div>
-                <div class="odontologia-meta-item"><strong>APOIO:</strong></div>
-              </div>
-
-              <div class="odontologia-galeria" aria-label="Fotos da imersão dos Estados Unidos e Itália">
-                <figure class="odontologia-foto"><img src="odontologia_image18.jpeg" alt="Imersão internacional em odontologia - Estados Unidos e Itália" loading="lazy"></figure>
-                <figure class="odontologia-foto"><img src="odontologia_image19.jpeg" alt="Imersão internacional em odontologia - Estados Unidos e Itália" loading="lazy"></figure>
-                <figure class="odontologia-foto horizontal"><img src="odontologia_image20.jpeg" alt="Imersão internacional em odontologia - Estados Unidos e Itália" loading="lazy"></figure>
-              </div>
-
-              <div class="odontologia-apoio">
-                <h4>APOIO:</h4>
-                <div class="odontologia-logos-apoio">
-                  <div class="odontologia-logo-apoio"><img src="odontologia_image11.png" alt="GOEn" loading="lazy"></div>
-                  <div class="odontologia-logo-apoio"><img src="odontologia_image10.png" alt="Dentoflex" loading="lazy"></div>
-                  <div class="odontologia-logo-apoio"><img src=" odontologia_image8.png" alt="Dental Excellence" loading="lazy"></div>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="odontologia-evento">
-            <div class="odontologia-evento-header">
-              <h3>Data: 24/03/2026 a 29/03/2026</h3>
-            </div>
-            <div class="odontologia-evento-corpo">
-              <div class="odontologia-meta-grid">
-                <div class="odontologia-meta-item"><strong>País:</strong> Escócia</div>
-                <div class="odontologia-meta-item"><strong>Característica:</strong> Cirurgiões dentistas em aperfeiçoamento de cirurgias básicas.</div>
-                <div class="odontologia-meta-item"><strong>Bastidores das imersões:</strong> a Odontologia na prática</div>
-              </div>
-
-              <div class="odontologia-galeria" aria-label="Fotos da imersão da Escócia">
-                <figure class="odontologia-foto"><img src="odontologia_image21.jpeg" alt="Imersão internacional em odontologia - Escócia" loading="lazy"></figure>
-                <figure class="odontologia-foto"><img src="odontologia_image22.jpeg" alt="Imersão internacional em odontologia - Escócia" loading="lazy"></figure>
-                <figure class="odontologia-foto"><img src="odontologia_image23.jpeg" alt="Imersão internacional em odontologia - Escócia" loading="lazy"></figure>
-                <figure class="odontologia-foto"><img src="odontologia_image24.jpeg" alt="Imersão internacional em odontologia - Escócia" loading="lazy"></figure>
-                <figure class="odontologia-foto"><img src="odontologia_image25.jpeg" alt="Imersão internacional em odontologia - Escócia" loading="lazy"></figure>
-                <figure class="odontologia-foto"><img src="odontologia_image26.jpeg" alt="Imersão internacional em odontologia - Escócia" loading="lazy"></figure>
-                <figure class="odontologia-foto"><img src="odontologia_image27.jpeg" alt="Imersão internacional em odontologia - Escócia" loading="lazy"></figure>
-                <figure class="odontologia-foto"><img src="odontologia_image28.jpeg" alt="Imersão internacional em odontologia - Escócia" loading="lazy"></figure>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
     </div>
 
     <div class="container-relatorio-coimbra">
