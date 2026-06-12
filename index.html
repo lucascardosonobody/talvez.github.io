@@ -35,7 +35,7 @@
   --vermelho: #c62828;
   --azul-escuro: #101828;
   --texto: #1f2937;
-  --cinza: #667085;
+  --cinza: #1c281f;
   --fundo: #f7f4ed;
   --branco: #ffffff;
   --sombra: 0 24px 70px rgba(16,24,40,.14);
@@ -7135,9 +7135,8 @@ small {
 
 #docentes .odontologia-meta-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 12px;
-  margin-bottom: 22px;
 }
 
 #docentes .odontologia-meta-item {
@@ -7796,6 +7795,58 @@ small {
     color:#004737;
 }
 
+.titulo-compromissos {
+  color: var(--verde);
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 22px;
+  position: relative;
+}
+
+.titulo-compromissos::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: var(--dourado);
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.lista-compromissos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: black;
+}
+
+.lista-compromissos li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 18px;
+  color: var(--verde);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.lista-compromissos li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--dourado);
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.texto-missao {
+  margin-top: 28px;
+  font-size: 1.08rem;
+  line-height: 1.9;
+  color: var(--verde);
+  font-weight: 500;
+}
+
 </style>
 
 
@@ -8064,19 +8115,38 @@ small {
     <div class="intro-programa-grid">
       
       <div class="intro-programa-texto">
-        <p>
-          A Internacionalização tem compromissos: <br>
-          1- Oferecer informações, consultoria, mentoria e criar estratégias para que docentes, discentes e técnicos administrativos <br>possam submeter projetos nos padrões internacionais. <br>
-          2- Concretizar pesquisas <br>
-          3- Compartilhar conhecimentos, que atendam às necessidades do mundo globalizado. <br>
-          4- Promover integração acadêmica, científica, cultural e humana com outras Universidades, Instituições e Comunidades. <br>
-        </p>
-        <p>
-          O Departamento busca promover excelência acadêmica, diálogo intercultural, 
-           cooperação científica e formação humana integral em conexão com Instituições 
-           Internacionais.
-        </p>
-      </div>
+
+  <h3 class="titulo-compromissos">
+    Compromissos da Internacionalização
+  </h3>
+
+  <ul class="lista-compromissos">
+    <li>
+      Oferecer informações, consultoria, mentoria e desenvolver estratégias para que docentes, discentes e técnicos administrativos possam submeter projetos em padrões internacionais.
+    </li>
+
+    <li>
+      Concretizar pesquisas e fomentar a produção científica em âmbito internacional.
+    </li>
+
+    <li>
+      Compartilhar conhecimentos que atendam às necessidades do mundo globalizado.
+    </li>
+
+    <li>
+      Promover a integração acadêmica, científica, cultural e humana com Universidades, Instituições e Comunidades internacionais.
+    </li>
+  </ul>
+
+  <p class="texto-missao">
+    O Departamento busca promover excelência acadêmica, diálogo intercultural,
+    cooperação científica e formação humana integral em conexão com Instituições
+    Internacionais.
+  </p>
+
+</div>
+
+</div>
     </div>
 
 
@@ -8533,7 +8603,6 @@ small {
               <div class="odontologia-meta-grid">
                 <div class="odontologia-meta-item"><strong>País:</strong> Canadá</div>
                 <div class="odontologia-meta-item"><strong>Característica:</strong> Cirurgiões dentistas em aperfeiçoamento de cirurgias básicas.</div>
-                <div class="odontologia-meta-item"><strong>APOIO:</strong> APOIO:</div>
               </div>
 
               <div class="odontologia-galeria" aria-label="Fotos da imersão do Canadá">
@@ -8555,7 +8624,6 @@ small {
               <div class="odontologia-meta-grid">
                 <div class="odontologia-meta-item"><strong>País:</strong> Estados Unidos e Itália</div>
                 <div class="odontologia-meta-item"><strong>Característica:</strong> Cirurgiões dentistas em aperfeiçoamento de cirurgias básicas (EUA) e avançadas (Italiano).</div>
-                <div class="odontologia-meta-item"><strong>APOIO:</strong></div>
               </div>
 
               <div class="odontologia-galeria" aria-label="Fotos da imersão dos Estados Unidos e Itália">
